@@ -140,15 +140,18 @@ function clearInputs() {
 if (workoutTypeSelect) {
   workoutTypeSelect.addEventListener("change", handleWorkoutTypeChange);
 }
+
 if (completeButton) {
   completeButton.addEventListener("click", function (event) {
     shouldNavigateAway = true;
     handleFormSubmit(event);
   });
 }
+
 if (addButton) {
   addButton.addEventListener("click", handleFormSubmit);
 }
+
 toast.addEventListener("animationend", handleToastAnimationEnd);
 
 document
