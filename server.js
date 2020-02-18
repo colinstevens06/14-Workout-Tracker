@@ -17,27 +17,11 @@ app.use(express.static("public"))
 // connect to the database
 mongoose.connect(process.env.MONGDB_URI || "mongodb://localhost/workout", { useNewUrlParser: true })
 
-// app.use(require("./seeders/seed"))
-
 // importing my routes
-// const router = require("express").Router();
-const db = require("./models")
+const routes = require("./routes/routes")
 
-// need to map out CRUD actions
+app.use(routes)
 
-// CREATE/post
-app.post("/api/workouts", ({ body }, res) => {
-  console.log(body)
-})
-
-// READ/get
-app.get("/api/workouts", (req, res) => {
-  db.Workout.find({}).then(dbCardio => {
-    res.json(dbCardio)
-  }).catch(err => {
-    res.json(err)
-  })
-})
 // server is listening
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
