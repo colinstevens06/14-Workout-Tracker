@@ -1,15 +1,22 @@
 // getting express routers
 const router = require("express").Router();
 const mongojs = require("mongojs")
+const path = require("path")
 
 // importing models
 const db = require("../models")
 const Workout = require("../models/Workout.js");
 
+// HTML ROUTE
+router.get('/exercise', function (req, res) {
+  res.sendfile(path.join(__dirname, '../public/exercise.html'))
+
+
+})
 
 // need to map out CRUD actions for the database
 
-// CREATE/post
+// CREATE / post
 router.post("/api/workouts", ({ body }, res) => {
   console.log("POST SUCCESSFUL")
   Workout.create(body)
@@ -40,7 +47,6 @@ router.put("/api/workouts/:id", (req, res) => {
           sets: body.sets,
           distance: body.distance
         }
-
       }
     })
     .then(dbWorkout => {
@@ -50,7 +56,6 @@ router.put("/api/workouts/:id", (req, res) => {
       res.status(400).json(err)
     })
 })
-
 
 // READ/get
 router.get("/api/workouts", (req, res) => {
