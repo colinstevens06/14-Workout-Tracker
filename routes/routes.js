@@ -10,8 +10,9 @@ const Workout = require("../models/Workout.js");
 // HTML ROUTE
 router.get('/exercise', function (req, res) {
   res.sendfile(path.join(__dirname, '../public/exercise.html'))
-
-
+})
+router.get('/stats', function (req, res) {
+  res.sendfile(path.join(__dirname, '../public/stats.html'))
 })
 
 // need to map out CRUD actions for the database
@@ -66,11 +67,17 @@ router.get("/api/workouts", (req, res) => {
   })
 })
 
+router.get("/api/workouts/range", (req, res) => {
+  db.Workout.find({}).then(dbCardio => {
+    res.json(dbCardio)
+  }).catch(err => {
+    res.json(err)
+  })
+})
+
+
 // UPDATE/PUT
 
-
 // DELETE/REMOVE
-
-
 
 module.exports = router
