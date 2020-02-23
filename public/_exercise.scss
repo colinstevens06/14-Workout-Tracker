@@ -1,0 +1,51 @@
+
+.exercise .ui.card {
+  width: 400px;
+  max-width: 600px;
+}
+
+.exercise .buttons {
+  margin-top: 20px;
+  display: flex;
+}
+
+.exercise .buttons button {
+  width: 100%;
+}
+
+#toast.success {
+  background-color: hsl(94, 40%, 86%);
+  color: hsl(94, 90%, 16%);
+  animation-name: toast;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+#toast {
+  border-radius: 4px;
+  border-width: 1px;
+  font-size: 13px;
+  line-height: 19.5px;
+  margin: 0px 0px 16px;
+  padding: 12px 59.5px 12px 20px;
+  text-align: left;
+  width: 300px;
+  min-height: 80px;
+  position: fixed;
+  top: 10px;
+  right: -320px;
+  opacity: 0;
+}
+
+@keyframes toast {
+  50% {
+    opacity: 1;
+    right: 10px;
+  }
+  100% {
+    opacity: 0;
+    right: -320px;
+  }
+}

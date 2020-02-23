@@ -1,0 +1,32 @@
+.prev-workout h3 {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.prev-workout p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.prev-workout button {
+  margin: 10px;
+}
+
+.workout .ui.card {
+  padding-top: 25px;
+}
+
+.new-workout {
+  display: none;
+}
+
+.prev-workout {
+  text-align: center;
+}
+
+.prev-workout .buttons {
+  display: flex;
+  height: 75px;
+  margin-top: 30px;
+}
+

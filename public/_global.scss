@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: #5793fd;
+  color: #ffffff;
+  height: 80px;
+  padding: 10px;
+  line-height: 3;
+  font-size: 1.2rem;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  height: 150px;
+  padding-top: 80px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header h1 {
+  transform: skewX(-2deg);
+}
+
+.ui.card h2 {
+  padding: 10px;
+}
