@@ -15,7 +15,7 @@ app.use(express.json())
 app.use(express.static("public"))
 
 // connect to the database
-mongoose.connect(process.env.MONGDB_URI || "mongodb://localhost/workout", { useNewUrlParser: true })
+mongoose.connect(process.env.MONGDB_URI || "mongodb://user:Password1@ds253368.mlab.com:53368/heroku_h44x0r0l", { useNewUrlParser: true })
 
 // importing my routes
 const routes = require("./routes/routes")
