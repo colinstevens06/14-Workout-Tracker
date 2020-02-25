@@ -75,9 +75,4 @@ router.get("/api/workouts/range", (req, res) => {
   })
 })
 
-
-// UPDATE/PUT
-
-// DELETE/REMOVE
-
 module.exports = router
