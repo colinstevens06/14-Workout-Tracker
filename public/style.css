@@ -17,15 +17,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-nav {
-  background-color: #5793fd;
-  color: #ffffff;
-  height: 80px;
-  padding: 10px;
-  line-height: 3;
-  font-size: 1.2rem;
-}
-
 a,
 a:hover,
 a:active,
@@ -36,18 +27,68 @@ a:visited {
 
 header {
   height: 150px;
-  padding-top: 80px;
-  text-align: center;
-  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header h1 {
-  -webkit-transform: skewX(-2deg);
-          transform: skewX(-2deg);
+  -webkit-transform: skewX(-7deg);
+          transform: skewX(-7deg);
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header .fa-dumbbell {
+  font-size: 2.5rem;
+  margin-right: 1.25rem;
 }
 
 .ui.card h2 {
   padding: 10px;
+}
+
+nav {
+  background-color: #5793fd;
+  color: #ffffff;
+  height: 80px;
+  padding: 10px;
+  line-height: 3;
+  font-size: 1.2rem;
+}
+
+.nav-item {
+  margin-right: 25px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  float: right;
+  margin-left: auto;
+  line-height: normal;
+}
+
+.nav-item:hover {
+  border: 1px solid #ffffff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav-brand {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.fa-running {
+  font-size: 2rem;
 }
 
 .prev-workout h3 {

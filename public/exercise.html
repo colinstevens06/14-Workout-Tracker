@@ -7,16 +7,25 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/ab3fd93a87.js" crossorigin="anonymous"></script>
+
   <title>Fitness Tracker</title>
 </head>
 
 <body>
+  <!-- ********** START OF NAVIGATION ********** -->
   <nav>
-    <a href="/">Fitness Tracker</a>
-    <a href="/stats">Dashboard</a>
+    <div class="nav-brand">
+      <i class="fas fa-running"></i>
+      Fitness Tracker
+    </div>
+    <a href="/stats" class="nav-item">Dashboard</a>
+    <a href="/" class="nav-item">Home</a>
   </nav>
+  <!-- ========== END OF NAVIGATION ========== -->
   <div class="wrapper">
     <header>
+      <i class="fas fa-dumbbell"></i>
       <h1>Fitness Tracker</h1>
     </header>
     <div class="ui container exercise">
